@@ -1,0 +1,28 @@
+{
+  "name": "agentflow-ai-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agentic AI Operations Automation Platform (Agentflow_AI)",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue.bold,green.bold\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "build": "npm run build --prefix client",
+    "start": "concurrently -n \"SERVER,CLIENT\" -c \"blue.bold,green.bold\" \"npm run start --prefix server\" \"npm run start --prefix client\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "agentic-ai",
+    "workflow-automation",
+    "langgraph",
+    "react-flow",
+    "multi-agent",
+    "nextjs",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT"
+}
