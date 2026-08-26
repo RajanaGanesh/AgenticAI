@@ -105,9 +105,9 @@ export default function IntegrationsPage() {
 
   const handleOAuthConnect = async (provider) => {
     try {
-      const res = await api.get(`/integrations/oauth/${provider}/auth-url`);
-      if (res.data?.url) {
-        window.location.href = res.data.url;
+      const res = await api.get(`/integrations/oauth/${provider}/start`);
+      if (res.data?.authUrl) {
+        window.location.href = res.data.authUrl;
       }
     } catch (err) {
       alert(`OAuth initialization failed: ${err.message}`);
