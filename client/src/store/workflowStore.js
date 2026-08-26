@@ -60,6 +60,11 @@ export const useWorkflowStore = create((set, get) => ({
   isSaving: false,
 
   setWorkflowMeta: (meta) => set((state) => ({ ...state, ...meta, isDirty: true })),
+  setName: (name) => set({ name, isDirty: true }),
+  setDescription: (description) => set({ description, isDirty: true }),
+  setStatus: (status) => set({ status, isDirty: true }),
+  setIsDirty: (isDirty) => set({ isDirty }),
+  setSaving: (isSaving) => set({ isSaving }),
 
   onNodesChange: (changes) => {
     set({
